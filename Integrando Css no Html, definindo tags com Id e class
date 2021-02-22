@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 15px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        .FundoVermelho {  
+            background-color: #06f5f56e;
+        }
+
+        .Negrito {
+            font-weight: bold;
+        }
+
+        #TextoPrincipal {
+            background-color: #ff33ff;
+        }
+    </style>
+    <!-- no css para pegar as classes eu coloco um . e o nome da classe -->
+    <!-- no css para pegar os id eu coloco um # e o nome do id-->
+</head>
+
+<body>
+    <h1>CSS</h1>
+    <span id="TextoPrincipal">Texto 1</span> <br>
+    <span class="FundoVermelho Negrito">Texto 2</span> <br>
+    <span class="FundoVermelho">Texto 3</span>
+</body>
+
+</html>
