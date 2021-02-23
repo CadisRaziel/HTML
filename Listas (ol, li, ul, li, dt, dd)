@@ -1,0 +1,36 @@
+<h1>Listas</h1>
+
+<!-- Listas ordenadas (1,2,3)-->
+<h2>Aprovados</h2>
+<ol>
+    <li>Vitor</li>
+    <li>Gi</li>
+    <li>Ariella</li>
+</ol>
+
+<hr>
+
+<!-- Lista não ordenada (•)-->
+<h2>Lista de compras</h2>
+<ul>
+    <li>Arroz</li>
+    <li>Feijao</li>
+    <ul>
+        <li>Tempero</li>
+    </ul>
+    <li>Carne</li>
+    <li>Macarrão</li>
+</ul>
+
+<!-- Lista de definições -->
+<h2>Principais termos do glossario de cloud computing</h2>
+<dl>
+    <dt>BasS</dt>
+    <dd>Backend como serviço</dd>
+    <dt>IaaS</dt>
+    <dd>Infraestrutura como serviço</dd>
+    <dt>PasS</dt>
+    <dd>Plataforma como serviço</dd>
+    <dt>SaaS</dt>
+    <dd>Software como serviço</dd>
+</dl>
