@@ -1,0 +1,30 @@
+<h1>Texto #Parte 02</h1>
+
+<!-- Quebra de linha e Quebra Temática -->
+<p>Isso está <br> em uma </br> nova linha.</p>
+<p>Tema interessante 1</p>
+<hr>
+<p>Tema interessante 2</p>
+
+<!-- Marcação semantica -->
+<p><strong>Cuidado</strong> Alta voltagem! <em>Somente pessoal autorizado !</em></p>
+<blockquote cite="http://en.wikipedia.org/wiki/Wikipedia"><p>Citações longas..</p></blockquote>
+<p>Fulano disse que <q>com o q essa frase vai ser automaticamente colocada entre ""</q></p>
+
+
+<!-- Outras tags menos usadas -->
+<p>
+    <abbr title="Professor">Prof</abbr> Fulano em seu livro
+    <cite>Livro de anatomia</cite> mostra sobre o corpo humano e etc..
+</p>
+
+<p>
+    <dfn>Buraco negro</dfn> distorce o espaço tempo etc etc..
+</p>
+    
+
+<address>Rua São Paulo, N918, Jardim América</address>
+
+<p>O oscar vai para <del>La la land</del> <ins>Moonlight</ins></p>
+
+<p>Computador de <s>R$2.249</s> por R$ 1.000</p>
