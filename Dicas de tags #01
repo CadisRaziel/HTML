@@ -1,0 +1,31 @@
+<!-- Cabeçalhos -->
+<h1>Cabeçalho principal</h1>
+<h2>Cabeçalho de nivel 2</h2>
+<h3>Cabeçalho de nivel 3</h3>
+<h4>Cabeçalho de nivel 4</h4>
+<h5>Cabeçalho de nivel 5</h5>
+<h6>Cabeçalho de nivel 6</h6>
+
+<!-- Paragrafos -->
+<p>
+    Olá esse é um texto1, 
+    aqui é um paragrafo, 
+    aqui a gente termina o texto1.
+</p>
+
+<!-- Negrito e italico -->
+<p>Texto em <b>negrito</b></p>
+<p>Texto em <i>italico</i></p>
+
+<!-- Sobrescrito e Subscrito -->
+<p>2<sup>2</sup> = 4
+<p>H<sub>2</sub>0 = Água </p>
+
+<!-- Espaços em brancos-->
+<p>Espaços       entre          palavras        não afeta na hora de apresentar !!</p>
+
+<!-- Colocando espaços longos (maneira errada) -->
+<p>Espaços &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;longos</p>
+
+<!-- Colocando espaços longos (maneira correta) -->
+<p>Espaços              <span class="fazer com css!!!">Aqui</span>             longos</p>
