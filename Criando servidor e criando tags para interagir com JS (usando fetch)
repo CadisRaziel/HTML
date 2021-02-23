@@ -1,0 +1,49 @@
+Anotações de como criamos o servidor !
+no terminal colocamos: npm i -g http-server (para que o node crie um servidor para o http)
+
+
+Criamos a pasta "Exercicios" e dentro test.html, temp.html
+
+
+dentro de index.html que esta fora da pasta "Exercicios" esta o seguinte codigo
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios HTML</title>
+</head>
+<body>
+    <header>
+        <h1>Exercicios HTML</h1> 
+    </header>
+    <nav>
+        <a href wm-nav="exercicios/teste.html">00 - Teste</a> | 
+        <a href wm-nav="exercicios/temp.html">01 - Temp</a>
+        
+    </nav>
+    <section id="conteudo"></section>
+    <footer>
+        <br>
+        Curso de Web Moderno
+    </footer>
+
+    <script>
+        //associando a cada um dos links uma função que sera disparada no onclick
+        //ele vai previnir o comportamento padrao (o browser fazendo as rotas automaticas)
+        
+        document.querySelectorAll('[wm-nav]').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+
+            link.onclick = function(e){
+                e.preventDefault()
+                fetch(link.getAttribute('wm-nav')) //fecth = requisição ajax atraves do link.href
+                    .then(resp => resp.text()) //resp.text() = promise
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+
+</body>
+</html> 
