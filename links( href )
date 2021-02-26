@@ -1,0 +1,32 @@
+<h1>Links</h1>
+
+<!-- URL absoluta (nao podemos tirar o http)-->
+<a id="inicio" href="http://www.google.com.br">Google 1</a><br>
+<a href="http://www.google.com.br" target="_blank">Google new page</a> <!-- _blank abre uma nova guia com o site-->
+<br>
+<br>
+
+<hr>
+
+<!-- URL relativa -->
+<a href="index.html">Voltar 1</a><br>
+<a href="/index.html">Voltar 2</a><br>
+<a href="../index.html">Voltar 3</a><br>
+
+<hr>
+
+<!-- clicando no link e sendo redirecionado para o email -->
+<a href="mailto:email@empresa.com.br">Entre em contato com nosso email</a><br>
+
+<!-- div#noticia = cria essa div com id abaixo rapidamente pelo emmet-->
+<div id="noticia" style="position:absolute;top:2000px;">
+    <h1>Noticia Buemba</h1>
+    <p>Não era nada...</p>
+    <a href="#inicio">Ir para o inicio la em cima(sites do google)</a>
+
+</div>
+
+<a href="#noticia">Ir para noticia la embaixo</a>
+
+<!--Cuidado, quando os links de ir para o final da pagina e ir para o inicio da pagina criados aqui-->
+<!--Quando for para o backend tem que tomar cuidado para não der erro de link #-->
