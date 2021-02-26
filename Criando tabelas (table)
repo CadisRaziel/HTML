@@ -1,0 +1,60 @@
+<table>
+    <caption>Produtos</caption>
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Ipad</td>
+            <td>3289,00</td>
+            <td>5</td>
+            <td>16445,00</td>
+        </tr>
+
+        <tr>
+            <td>Galaxy s11</td>
+            <td>2649,00</td>
+            <td>5</td>
+            <td>21192,00</td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">Total</td> <!--colspan para preencher um numero de colunas para o lado(aqui vai ser 3)-->
+            <td>37637,00</td>
+            <!-- rowspan ="" ele vai preencer linhas para baixo-->
+        </tr>
+    </tfoot>
+</table>
+
+<!--Aplicando estilo em uma tabela (repare que a tabela nao tem id e nem class) -->
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    thead tr {
+        border-bottom: solid 3px #222;
+    }
+
+    /*hover = quando passar o mouse em cima ele muda de cor*/
+    tbody tr:hover {
+        background-color: #dedede
+    }
+
+    tfoot {
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+</style>
