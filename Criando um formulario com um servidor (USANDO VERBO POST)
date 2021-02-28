@@ -1,0 +1,86 @@
+FORMULARIO 
+
+<h1>formulario</h1>
+
+<form method="POST">
+    <input type="hidden" name="id" value="3">
+    <input type="text" name="Nome">
+    <input type="password" name="Senha">
+    <textarea name="Bio" cols="30" rows="10"></textarea>
+    <div>
+        <input type="radio" name="tipo" value="admin"> Admin
+        <input type="radio" name="tipo" value="regular"> Regular
+        <input type="radio" name="tipo" value="professor"> Professor
+    </div>
+
+    <div>
+        <input type="checkbox" name="ativo"> Ativo
+    </div>
+
+    <select name="estado" >
+        <option value="">Selecione</option>
+        <option value="AC">Acre</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="RJ">Rio de janeiro</option>
+        <option value="SP">São Paulo</option>
+    </select> 
+
+    <select name="intereses" multiple size="2">
+        <option value="JS">JavaScript</option>
+        <option value="NodeJS">NodeJS</option>
+        <option value="PHP">Php</option> 
+        <option value="JAVA">Java</option>
+        <option value="C#">C#</option>
+    </select>
+
+    <button formaction="http://localhost:8080/usuarios">Cadastrar</button>
+    <button formaction="http://localhost:8080/usuarios/3">Alterar os dados</button>
+    
+
+</form>
+
+<style>
+    input,
+    textarea,
+    select {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type=radio],
+    input[type=checkbox] {
+        display: inline;
+    }
+  
+</style>
+
+//---------------------------------------------------------------------
+>>>>>> SERVER.JS <<<<<<<
+
+const express = require('express')
+const app = express()
+const bodyParser = require('body-parser')
+const port = 8080
+
+//o bodyParser serve para mostrar os valores obtidos no terminal !! (se nao colocar vem undefined no terminal)
+app.use(bodyParser.urlencoded({ extended: true }))
+
+app.post('/usuarios', (req, res) => {
+    console.log(req.body)
+    res.send('Dados cadastrados')
+})
+
+app.post('/usuarios/:id', (req, res) => {
+    console.log(req.params.id)
+    console.log(req.body)
+    res.send('Dados alterados')
+})
+
+app.listen(port, function(erro){
+    if(erro){
+        console.log("Connection error!")
+    } else {
+        console.log(`The server is running on the port ${port}`)
+    }
+})
