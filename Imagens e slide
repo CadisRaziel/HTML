@@ -1,0 +1,111 @@
+<div wm-slider>
+
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="Foto do site cod3r" width="513" height="342"
+            title="Foto que pegamos como teste do site cod3r">
+    </p>
+
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" alt="Gif do site cod3r" height="342">
+    </p>
+
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="Foto png do site cod3r" width="513"
+            height="342">
+    </p>
+
+    <p class="texto">
+        <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" alt="Avatar" height="50" align="left">
+        aopsfsopfoasfosk
+        aofkasopfafokaopsfkas
+        saodfkpaskfdasdfk
+        asodfpkasoasfkoasdjasdf
+        2342135123
+        23wqekfs
+        dkf
+
+    </p>
+
+    <!-- com a class cidade eu consigo no css incluir a imagem por la (olhe nos styles)-->
+    <p class="cidade"></p>
+
+
+    <!--Quando eu diminuar a pagina para 600px ele vai parar de mostrar a logo-larga e vai apresentar a logo-estreita-->
+    <!--sempre bom usar !!!!-->
+    <p>
+        <picture>
+            <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png" media="(min-width: 600px)">
+            <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="logo">
+        </picture>
+    </p>
+
+</div>
+
+
+<style>
+    /*para fazer o script tive que colocar no p os seguintes atributos aqui no css !!*/
+    p {
+        position: absolute;
+        display: none;
+    }
+
+    .texto {
+        width: 400px;
+    }
+
+    .texto img {
+        margin-right: 10px;
+    }
+
+    /*Posso incluir imagems direto do CSS !!*/
+    .cidade {
+        width: 513px;
+        height: 342px;
+        background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200%;
+    }
+</style>
+
+
+<!-- fazendo com que as imagens fique passando sozinhas -->
+<script>
+    function mover(elem, inicio, fim, passo, callback) {
+        const novoInicio = inicio - passo
+        if(novoInicio >= fim) {
+            elem.style.left = novoInicio + 'px'
+            setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 15)
+        } else {
+            callback()
+        }
+    }
+
+    function slider() {
+        const elementos = document.querySelectorAll('[wm-slider] > p')
+        const slides = Array.from(elementos)
+        exibirSlide(slides, slides[0])
+    }
+    
+    function exibirSlide(slides, slide) {
+        slide.style.display = 'block'
+
+        const inicio = innerWidth
+        const fim = -slide.clientWidth
+
+        slide.style.left = `${inicio}px`
+
+        mover(slide, inicio, fim, 5, () => {
+            slide.style.display = 'none'
+            exibirSlide(slides, getProximo(slides, slide))
+        })
+    }
+
+    function getProximo(lista, atual) {
+        const i = lista.indexOf(atual) + 1
+        return i < lista.length ? lista[i] : lista[0]
+    }
+
+    slider()
+
+</script>
